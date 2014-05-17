@@ -40,24 +40,13 @@ def yearify(s):
     and ? off, convert to an int, return"""
     return int(s.strip().strip('?'))
 
-def print_header(out, start, end):
-    out.write('year')
-    for y in range(start, end+1):
-        out.write('\t%s' % y)
-    out.write('\n')
-
-def print_years(out, start, end, data, label):
-    out.write(label)
-    for y in range(start, end+1):
-        out.write('\t%s' % (data[y],))
-    out.write('\n')
-
 def main():
     load_data()
+    years = range(year_min, year_max+1)
     out = open(outfile, 'w')
-    print_header(out, year_min, year_max)
-    print_years(out, year_min, year_max, cs_lines, 'cs')
-    print_years(out, year_min, year_max, ece_lines, 'ece')
+    out.write( "\t".join(['year']+ [str(y) for y in years]) + "\n")
+    out.write( "\t".join(['CS']+[str(cs_lines[y]) for y in years]) + "\n")
+    out.write( "\t".join(['ECE']+[str(ece_lines[y]) for y in years]) + "\n")
     out.close()
 
 if __name__ == '__main__':
