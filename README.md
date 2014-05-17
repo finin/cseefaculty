@@ -1,11 +1,11 @@
 Http://bit.ly/cseeFaculty is a Google Spreadsheet listing all of the
-full-time tenure-track faculty our department has had plus an
-incomplete list of non-TT positions.
+full-time tenure-track faculty CSEE has had plus an incomplete list of
+non-TT positions.
 
-It is good to capture this history and the data will be useful when we
-argue for more lines.  The data shows (http://bit.ly/1gb7F9K), for
-example, that even with the three new faculty for AY 2015, we will
-have fewer CS TT lines than in AYs 2002-2006.
+It is good to capture this history and it will be useful when we argue
+for more lines.  The data shows (http://bit.ly/1gb7F9K), for example,
+that even with the three new faculty for AY 2015, we will have fewer
+CS TT lines than in AYs 2002-2006.
 
 Please add anyone I've missed and correct dates that are wrong.  I
 highlighted dates I was unsure about.  The data for each faculty
@@ -17,7 +17,7 @@ member includes
   -- last academic year or blank if continuing
   -- AYs on leave (e.g., '2007 2014')
 
-For an academic year, use the year that it starts in, e.g, use 2014
+For an academic year, we use the year in which it starts, e.g, 2014
 for the 2014-15 academic year.
 
 I thought we might not worry about half years at this point.
@@ -30,4 +30,3 @@ With reasonably complete data that includes lecturers we can easily
 generate data for graphs and dynamic visualizations showing the
 evolution of teaching faculty and staff and the number of students in
 our programs.
-
