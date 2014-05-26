@@ -3,13 +3,19 @@ from sys import stdout
 
 infile =  'faculty.csv'
 outfile = 'by_year.tsv'
+deltafile = 'changes.txt'
 
-cs_lines =  defaultdict(int)
-ece_lines =  defaultdict(int)
+cs_tt =  defaultdict(int)
+ece_tt =  defaultdict(int)
+
+cs_teaching =  defaultdict(int)
+ece_teaching =  defaultdict(int)
 
 leave =  defaultdict(int)
 cs_leave =  defaultdict(int)
 ece_leave =  defaultdict(int)
+
+delta = defaultdict(list)
 
 year_min = 2525
 year_max = 2014
@@ -17,37 +23,41 @@ year_max = 2014
 def load_data():
     global year_max, year_min
     for line in open(infile):
-        (fn,ln,status,prog,start,end,leave) = line.split(',')
+        (fn,ln,status,prog,start,last,leave) = line.strip().split(',')[:7]
+        name = '%s_%s' % (fn, ln)
         if status != 'TT':
             continue
         start = yearify(start)
-        end = yearify(end) if end.strip() else year_max
+        last = yearify(last)
+        delta[start].append('+' + name)
+        delta[last].append('-' + name)
         onleave = map(yearify,leave.split())
-        if start < year_min:
-            year_min = start
-        if end > year_max:
-            year_max = year
-        for year in range(start, end+1):
+        year_min = min(start, year_min)
+        for year in range(start, (last or year_max)+1):
             if prog == 'C':
-                cs_lines[year] += 1
+                cs_tt[year] += 1
             elif prog == 'E':
-                ece_lines[year] += 1
+                ece_tt[year] += 1
             else:
                 print 'Bad program value', line
 
 def yearify(s):
     """converts string into an integer representing a year by striping
     and ? off, convert to an int, return"""
-    return int(s.strip().strip('?'))
+    return int(s.strip().strip('?')) if s else ''
 
 def main():
     load_data()
     years = range(year_min, year_max+1)
     out = open(outfile, 'w')
     out.write( "\t".join(['year']+ [str(y) for y in years]) + "\n")
-    out.write( "\t".join(['CS']+[str(cs_lines[y]) for y in years]) + "\n")
-    out.write( "\t".join(['ECE']+[str(ece_lines[y]) for y in years]) + "\n")
+    out.write( "\t".join(['CS']+[str(cs_tt[y]) for y in years]) + "\n")
+    out.write( "\t".join(['ECE']+[str(ece_tt[y]) for y in years]) + "\n")
     out.close()
+    out = open(deltafile, 'w')
+    for y in years:
+        out.write("%s: %s\n" % (y, ', '.join(sorted(delta[y]))))
+    out.close()    
 
 if __name__ == '__main__':
     main()
