@@ -1,0 +1,32 @@
+1983: +Brooke_Stephens
+1984: +Samuel_Lomonaco
+1985: 
+1986: +Curtis_Menyuk, +James_Lyle, +Keith_Humenik, +She-tung_Peng
+1987: +Chein-I_Chang, +Howard_Motteler, +James_Mayfield, +Jeff_Jackson, +Shlomo_Weiss
+1988: +Charles_Nicholas, +Deepinder_Sidhu, +Gary_Carter, +Joel_Morris, +Yung-Jui_Chen
+1989: +Alan_Sherman, +Li_Yan, +Yaacov_Yesha, +Yelena_Yesha
+1990: +James_Sasaki, -Jeff_Jackson
+1991: +Fow-Sen_Choa, +Tim_Finin
+1992: +Richard_Chang, +Tulay_Adali, -James_Lyle, -Keith_Humenik, -She-tung_Peng
+1993: +David_Ebert, +Yun_Peng, -Shlomo_Weiss
+1994: +Ethan_Miller, +Russell_Turner
+1995: +Jyh-Chia_Chen
+1996: +Kostantinos_Kalpakis, -James_Mayfield, -James_Sasaki, -Russell_Turner
+1997: +James_Plusquellic, +John_Pinkston, -Howard_Motteler
+1998: +Anupam_Joshi, +Penny_Rheingans
+1999: -Ethan_Miller
+2000: +Dhananjay_Phatak, +Frank_Miller, +Padma_Mundur, -David_Ebert, -Frank_Miller, -Jyh-Chia_Chen
+2001: +Hillol_Kargupta, +Marie_desJardins, +Mohamed_Younis, +Tim_Oates
+2002: +Joseph_Thomas, +Krishna_Sivalingam, +Marc_Olano, +Sergei_Nirenberg, +Zary_Segall
+2003: +Anthony_Johnson
+2004: +Mohammad_Tehranipoor
+2005: -Mohammad_Tehranipoor
+2006: -Padma_Mundur
+2007: -James_Plusquellic, -Joseph_Thomas
+2008: +Ryan_Robucci
+2009: -Krishna_Sivalingam
+2010: +Chintan_Patel, +Gymama_Slaughter, -Zary_Segall
+2011: +Tinoosh_Mohsenin, -Brooke_Stephens, -John_Pinkston
+2012: +Jian_Chen, +Nilanjan_Banerjee, -Sergei_Nirenberg, -Yung-Jui_Chen
+2013: 
+2014: +Cynathia_Matuszek, +Seung-Jun_Kim, +Ting_Zhu
