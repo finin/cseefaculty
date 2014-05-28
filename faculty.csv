@@ -1,19 +1,19 @@
 given name,surname,status,P,first,last,on leave,
 Tulay,Adali,TT,E,1992,,,
-Sanjeev,Ahuja,X,C,1986?,1987?,,
+Sanjeev,Ahuja,CS,C,1985,1987,,
 Nilanjan,Banerjee,TT,C,2012,,,
 David,Bourner,PP,E,2001,2006,,
 Gary,Carter,TT,E,1988,,,
 Chein-I,Chang,TT,E,1987,,,
 Richard,Chang,TT,C,1992,,,
 Jian,Chen,TT,C,2012,,,
-Jyh-Chia,Chen,TT,E,1995?,2000?,,
-Yung-Jui,Chen,TT,E,1988?,2012,,
+Jyh-Chia,Chen,TT,E,1991,1999,,
+Yung-Jui,Chen,TT,E,1987,2012,,
 Fow-Sen,Choa,TT,E,1991,,,
-Marie,desJardins,TT,C,2001,,,
+Marie,desJardins,TT,C,2001,,2007 2014,
 David,Ebert,TT,C,1993,2000,,
 Tim,Finin,TT,C,1991,,2007 2014,x
-Keith,Humenik,TT,C,1986?,1992,,x
+Keith,Humenik,TT,C,1986,1992,,x
 Jeff,Jackson,TT,C,1987?,1990?,,x
 Anthony,Johnson,TT,E,2003,,,
 Anupam,Joshi,TT,C,1998,,,
@@ -40,13 +40,13 @@ Tim,Oates,TT,C,2001,,,
 Marc,Olano,TT,C,2002,,,
 Chintan,Patel,TT,E,2010,,,
 She-tung,Peng,TT,C,1986?,1992,,x
-Yun,Peng,TT,C,1993?,,2006? 2013,
+Yun,Peng,TT,C,1992?,,2006? 2013,
 Dhananjay,Phatak,TT,C,2000,,,
 John,Pinkston,TT,E,1997,2011,,
 James,Plusquellic,TT,E,1997,2007,2003,
 Penny,Rheingans,TT,C,1998,,,
 Ryan,Robucci,TT,E,2008,,,
-James,Sasaki,TT,C,1990?,1996?,,x
+James,Sasaki,TT,C,1988,1995,,x
 Zary,Segall,TT,C,2002?,2010?,,
 Alan,Sherman,TT,C,1989,,,x
 Deepinder,Sidhu,TT,C,1988,,,x
@@ -54,7 +54,7 @@ Krishna,Sivalingam,TT,C,2002,2009,,
 Gymama,Slaughter,TT,E,2010,,,
 Brooke,Stephens,TT,C,1983,2011,,x
 Mohammad,Tehranipoor,TT,E,2004,2005,,
-Joseph,Thomas,TT,E,2002?,2007?,,
+Joseph,Thomas,TT,E,2001?,2007?,,
 Russell,Turner,TT,C,1994,1996,,
 Andrew,Veronis,V,E,1998?,2000?,,
 Shlomo,Weiss,TT,C,1987,1993?,,x
@@ -63,7 +63,7 @@ Yaacov,Yesha,TT,C,1989,,,x
 Yelena,Yesha,TT,C,1989,,,x
 Mohamed,Younis,TT,E,2001,,,
 Ting,Zhu,TT,C,2014,,,
-John,Park,L,C,2012?,,,
+John,Park,L,C,2012,,,
 Shawn,Lupoli,L,C,2011,,,
 Pedram,Sadeghian,L,C,2013,,,
 Richard,Forno,L,C,2010,,,

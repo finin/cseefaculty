@@ -1,5 +1,7 @@
 from collections import defaultdict
 from sys import stdout
+import numpy as np
+import matplotlib.pyplot as plt
 
 infile =  'faculty.csv'
 outfile = 'by_year.tsv'
@@ -46,6 +48,24 @@ def yearify(s):
     and ? off, convert to an int, return"""
     return int(s.strip().strip('?')) if s else ''
 
+def graph_tt():
+    years = range(year_min, year_max+1)    
+    N = len(years)
+    width = 0.5
+    ind = np.arange(0, 4*N, 4)    # the x locations for the groups
+    cs = [cs_tt[y] for y in years]
+    ece = [ece_tt[y] for y in years]
+    top = max(max(cs),max(ece))
+    p1 = plt.bar(ind, cs, width, color='r')
+    p2 = plt.bar(ind, ece, width, color='y', bottom=cs)
+    # p2 = plt.bar(ind+width, ece, width, color='y')
+    plt.ylabel('TT lines')
+    plt.title('CSEE Tenure Track lines by year')
+    plt.xticks(ind+width/2.0, years)
+    plt.yticks(np.arange(0,top+5,10))
+    plt.legend( (p1[0], p2[0]), ('CS', 'ECE') )
+    plt.show()
+
 def main():
     load_data()
     years = range(year_min, year_max+1)
@@ -57,7 +77,8 @@ def main():
     out = open(deltafile, 'w')
     for y in years:
         out.write("%s: %s\n" % (y, ', '.join(sorted(delta[y]))))
-    out.close()    
+    out.close()
+    graph_tt()
 
 if __name__ == '__main__':
     main()
