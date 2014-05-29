@@ -8,10 +8,12 @@ outfile = 'by_year.tsv'
 deltafile = 'changes.txt'
 
 cs_tt =  defaultdict(int)
-ece_tt =  defaultdict(int)
+ee_tt =  defaultdict(int)
+ce_tt =  defaultdict(int)
 
 cs_who = defaultdict(list)
-ece_who = defaultdict(list)
+ce_who = defaultdict(list)
+ee_who = defaultdict(list)
 
 cs_teaching =  defaultdict(int)
 ece_teaching =  defaultdict(int)
@@ -39,12 +41,15 @@ def load_data():
         onleave = map(yearify,leave.split())
         year_min = min(start, year_min)
         for year in range(start, (last or year_max)+1):
-            if prog == 'C':
+            if prog == 'CS':
                 cs_tt[year] += 1
                 cs_who[year].append('%s_%s' % (ln,fn))
-            elif prog == 'E':
-                ece_tt[year] += 1
-                ece_who[year].append('%s_%s' % (ln,fn))
+            elif prog == 'CE':
+                ce_tt[year] += 1
+                ce_who[year].append('%s_%s' % (ln,fn))
+            elif prog == 'EE':
+                ee_tt[year] += 1
+                ee_who[year].append('%s_%s' % (ln,fn))
             else:
                 print 'Bad program value', line
 
@@ -77,7 +82,8 @@ def main():
     out = open(outfile, 'w')
     out.write( "\t".join(['year']+ [str(y) for y in years]) + "\n")
     out.write( "\t".join(['CS']+[str(cs_tt[y]) for y in years]) + "\n")
-    out.write( "\t".join(['ECE']+[str(ece_tt[y]) for y in years]) + "\n")
+    out.write( "\t".join(['CE']+[str(ce_tt[y]) for y in years]) + "\n")
+    out.write( "\t".join(['EE']+[str(ee_tt[y]) for y in years]) + "\n")
     out.close()
     out = open(deltafile, 'w')
     for y in years:
