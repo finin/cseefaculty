@@ -10,6 +10,9 @@ deltafile = 'changes.txt'
 cs_tt =  defaultdict(int)
 ece_tt =  defaultdict(int)
 
+cs_who = defaultdict(list)
+ece_who = defaultdict(list)
+
 cs_teaching =  defaultdict(int)
 ece_teaching =  defaultdict(int)
 
@@ -38,8 +41,10 @@ def load_data():
         for year in range(start, (last or year_max)+1):
             if prog == 'C':
                 cs_tt[year] += 1
+                cs_who[year].append('%s_%s' % (ln,fn))
             elif prog == 'E':
                 ece_tt[year] += 1
+                ece_who[year].append('%s_%s' % (ln,fn))
             else:
                 print 'Bad program value', line
 
@@ -78,7 +83,8 @@ def main():
     for y in years:
         out.write("%s: %s\n" % (y, ', '.join(sorted(delta[y]))))
     out.close()
-    graph_tt()
+    print sorted(cs_who[2013])
+    # graph_tt()
 
 if __name__ == '__main__':
     main()
